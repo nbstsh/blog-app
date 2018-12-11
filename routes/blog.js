@@ -34,7 +34,14 @@ router.post('/', (req, res) => {
 
 //SHOW
 router.get('/:id', (req, res) => {
-    res.send('show');
+    Blog.findById(req.params.id, (err, blog) => {
+        if (err) {
+            console.log(err);
+            return res.redirect('back');
+        }
+
+        res.render('blogs/show', { blog: blog })
+    })
 })
 
 //EDIT
