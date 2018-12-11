@@ -70,7 +70,14 @@ router.put('/:id', (req, res) => {
 
 //DELETE
 router.delete('/:id', (req, res) => {
-    res.send('delete');
+    Blog.findByIdAndDelete(req.params.id, (err) => {
+        if (err) {
+            console.log(err);
+            return res.redirect('back');
+        }
+
+        res.redirect('/blogs');
+    })
 })
 
 

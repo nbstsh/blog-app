@@ -6,5 +6,8 @@
 
 <a href="/blogs">go back</a>
 <a href="/blogs/<%= blog._id %>/edit">EDIT</a>
+<form action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+    <button>DELETE</button>
+</form>
 
 <% include ../partials/footer %>
