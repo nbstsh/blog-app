@@ -4,37 +4,44 @@ const router = express.Router();
 const Blog = require('../models/blog');
 
 //INDEX
-router.get('/', function (req, res) {
-    res.send('index');
+router.get('/', (req, res) => {
+    Blog.find({}, (err, blogs) => {
+        if (err) {
+            console.log(err);
+            res.redirect('back');
+        }
+
+        res.render('blogs/index', { blogs: blogs });
+    });
 })
 
 //NEW
-router.get('/new', function (req, res) {
+router.get('/new', (req, res) => {
     res.send('new');
 })
 
 //CREATE
-router.post('/:id', function (req, res) {
+router.post('/:id', (req, res) => {
     res.send('create');
 })
 
 //SHOW
-router.get('/:id', function (req, res) {
+router.get('/:id', (req, res) => {
     res.send('show');
 })
 
 //EDIT
-router.get('/:id/edit', function (req, res) {
+router.get('/:id/edit', (req, res) => {
     res.send('edit');
 })
 
 //UPDATE
-router.put('/:id', function (req, res) {
+router.put('/:id', (req, res) => {
     res.send('Update');
 })
 
 //DELETE
-router.delete('/:id', function (req, res) {
+router.delete('/:id', (req, res) => {
     res.send('delete');
 })
 
