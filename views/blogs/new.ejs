@@ -1,0 +1,11 @@
+<% include ../partials/header %>
+
+<h1>new ejs</h1>
+<form action="/blogs" method="POST">
+    <input type="text" name="blog[title]" placeholder="title">
+    <input type="text" name="blog[image]" placeholder="image">
+    <textarea name="blog[body]"></textarea>
+    <button>CREATE NEW BLOG</button>
+</form>
+
+<% include ../partials/footer %>
