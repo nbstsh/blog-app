@@ -46,12 +46,26 @@ router.get('/:id', (req, res) => {
 
 //EDIT
 router.get('/:id/edit', (req, res) => {
-    res.send('edit');
+    Blog.findById(req.params.id, (err, blog) => {
+        if (err) {
+            console.log(err);
+            return res.render('back');
+        }
+        console.log(blog);
+        res.render('blogs/edit', { blog: blog });
+    })
 })
 
 //UPDATE
 router.put('/:id', (req, res) => {
-    res.send('Update');
+    Blog.findByIdAndUpdate(req.params.id, req.body.blog, (err, blog) => {
+        if (err) {
+            console.log(err);
+            return res.render('back');
+        }
+
+        res.redirect(`/blogs/${blog._id}`);
+    })
 })
 
 //DELETE
