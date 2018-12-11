@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+//ROUTES
+const blogRoutes = require('./routes/blog');
 
 // MONGODB CONFIG
 mongoose.connect('mongodb://localhost:27017/blog_app', { useNewUrlParser: true });
@@ -12,6 +14,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true }))
 
+//ROUTES CONFIG
+app.use('/blogs', blogRoutes);
 
 app.get('/', function (req, res) {
     res.render('index');
