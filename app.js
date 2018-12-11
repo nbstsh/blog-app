@@ -8,6 +8,8 @@ const blogRoutes = require('./routes/blog');
 // MONGODB CONFIG
 mongoose.connect('mongodb://localhost:27017/blog_app', { useNewUrlParser: true });
 
+//seedDB
+require('./seedDB')();
 
 // APP CONFIG
 app.set('view engine', 'ejs');
@@ -17,11 +19,11 @@ app.use(bodyParser.urlencoded({extended: true }))
 //ROUTES CONFIG
 app.use('/blogs', blogRoutes);
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.get('/*', function (req, res) {
+app.get('/*', (req, res) => {
     res.send('sorry....no page found....');
 })
 
