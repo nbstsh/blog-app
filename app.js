@@ -9,7 +9,7 @@ const blogRoutes = require('./routes/blog');
 mongoose.connect('mongodb://localhost:27017/blog_app', { useNewUrlParser: true });
 
 //seedDB
-require('./seedDB')();
+// require('./seedDB')();
 
 // APP CONFIG
 app.set('view engine', 'ejs');
