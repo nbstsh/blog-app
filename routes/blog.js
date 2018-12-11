@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     Blog.find({}, (err, blogs) => {
         if (err) {
             console.log(err);
-            res.redirect('back');
+            return res.redirect('back');
         }
 
         res.render('blogs/index', { blogs: blogs });
@@ -17,12 +17,19 @@ router.get('/', (req, res) => {
 
 //NEW
 router.get('/new', (req, res) => {
-    res.send('new');
+    res.render('blogs/new');
 })
 
 //CREATE
-router.post('/:id', (req, res) => {
-    res.send('create');
+router.post('/', (req, res) => {
+    Blog.create(req.body.blog, (err, blog) => {
+        if (err) {
+            console.log(err);
+            return res.redirect('back');
+        }
+
+        res.redirect('/blogs');
+    });
 })
 
 //SHOW
