@@ -90,6 +90,7 @@ body {
 .widget-profile {
   background-color: white;
   border: 1rem solid white;
+  overflow: hidden;
   position: relative; }
   .widget-profile * {
     position: inherit;
@@ -101,38 +102,58 @@ body {
     background-image: url("https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
     -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
     clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
-    background-size: cover; }
+    background-size: 70rem;
+    background-position-x: -38rem;
+    background-position-y: 73rem;
+    transition: all .1s ease-in-out; }
+    .widget-profile__image:hover {
+      background-position-x: -23rem;
+      background-position-y: 84rem;
+      transform: rotate(-10deg); }
   .widget-profile__name {
     font-size: 1.6rem;
     display: block;
     text-align: center;
     margin: 2rem 0; }
-  .widget-profile .widget-profile__bg--gradient-top, .widget-profile .widget-profile__bg--gradient-slash, .widget-profile .widget-profile__bg--grey-1, .widget-profile .widget-profile__bg--grey-2, .widget-profile .widget-profile__bg--grey-3 {
+  .widget-profile .widget-profile__bg--gradient-slash, .widget-profile .widget-profile__bg--grey-1, .widget-profile .widget-profile__bg--grey-2, .widget-profile .widget-profile__bg--grey-3 {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; }
-  .widget-profile__bg--gradient-top {
-    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.5), rgba(0, 128, 0, 0.5));
-    clip-path: polygon(0 0, 80% 0, 80% 0%, 0 10%);
-    z-index: 3; }
   .widget-profile__bg--gradient-slash {
     background-image: linear-gradient(to right, rgba(255, 255, 0, 0.5), rgba(0, 128, 0, 0.5));
     clip-path: polygon(10% 100%, 100% 0, 100% 30%, 10% 100%);
-    z-index: 3; }
+    z-index: 3;
+    transition: all .2s;
+    transform: scale(5) rotate(250deg); }
   .widget-profile__bg--grey-1 {
     background-color: rgba(134, 134, 134, 0.1);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 20%);
-    z-index: 1; }
+    z-index: 1;
+    transition: all .4s;
+    transition-delay: 0.3s; }
   .widget-profile__bg--grey-2 {
     background-color: rgba(177, 177, 177, 0.1);
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 10%);
-    z-index: 1; }
+    z-index: 1;
+    transition: all .4s;
+    transition-delay: 0.4s; }
   .widget-profile__bg--grey-3 {
     background-color: rgba(223, 223, 223, 0.1);
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 0%);
-    z-index: 1; }
+    z-index: 1;
+    transition: all .4s;
+    transition-delay: 0.5s; }
+  .widget-profile:hover .widget-profile__bg--gradient-slash {
+    clip-path: polygon(10% 100%, 100% 0, 100% 30%, 10% 100%);
+    transform: scale(1) rotate(0deg); }
+  .widget-profile:hover .widget-profile__bg--grey-1 {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 15%); }
+  .widget-profile:hover .widget-profile__bg--grey-2 {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 0%); }
+  .widget-profile:hover .widget-profile__bg--grey-3 {
+    clip-path: polygon(0 0, 100% 0, 100% 105%, 0 -15%); }
 
 .header {
   height: 15rem;
