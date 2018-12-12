@@ -4,9 +4,11 @@
 @import "abstracts/mixins";
 
 @import "base/base";
+@import "base/typography";
 
 @import "components/blog-card";
 @import "components/navigation";
+@import "components/widget";
 
 @import "layout/header";
 @import "layout/main";

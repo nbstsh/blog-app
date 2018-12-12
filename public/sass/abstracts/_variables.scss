@@ -1,5 +1,15 @@
 // COLOR
+$color-grey-superlight: #f9f9f9;
+
 $color-grey-light-1: #868686;
+$color-grey-light-2: #b1b1b1;
+$color-grey-light-3: #dfdfdf;
+$color-grey-list: (
+    1: $color-grey-light-1,
+    2: $color-grey-light-2,
+    3: $color-grey-light-3
+);
+
 $color-grey-dark-1: #353535;
 
 $color-white: #fff;
@@ -10,8 +20,11 @@ $color-black: #000;
 $default-font-size: 1.6rem;
 
 
+// BOX SHADOW
+$box-shadow-normal: 0 1px 1px rgba($color-black, .3);
+
 //GRID
-$grid-width: 114rem;
+$grid-width: 140rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 2rem;
 $min-col-total-number: 2;

@@ -6,12 +6,7 @@
         margin-bottom: $gutter-vertical; 
     }
 
-    //TODO clearfix variable作成
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    @include clearfix;
 
     [class^="col-"] {
         float: left;

@@ -13,24 +13,56 @@
 </nav>
 
 <main class="main">
-    <section class="section-blog-list">
-        <% blogs.forEach((blog) => { %>
-        <div class="blog-list-item b-card">
-            <div class="b-card__img">
-                <img src="<%= blog.image %>">
-            </div>
-            <div class="b-card__description">
-                <h3 class="b-card__title"><%= blog.title %></h3>
-                <p class="b-card__body"><%= blog.body.substring(0, 50) %> ...</p>
-            </div>
-            <a class="b-card__link" href="/blogs/<%= blog._id %>"></a>
-        </div>
-        <% }) %>
-    </section>
+    <div class="row">
+        <div class="col-2-of-3">
+            
+            <section class="section-blog-list">
+                <% blogs.forEach((blog) => { %>
+                <div class="blog-list-item b-card">
+                    <div class="b-card__img">
+                        <img src="<%= blog.image %>">
+                    </div>
+                    <div class="b-card__description">
+                        <h3 class="b-card__title"><%= blog.title %></h3>
+                        <p class="b-card__body"><%= blog.body.substring(0, 50) %> ...</p>
+                    </div>
+                    <a class="b-card__link" href="/blogs/<%= blog._id %>"></a>
+                </div>
+                <% }) %>
+            </section>
 
-    <section class="section-sidebar">
-        side bar
-    </section>
+        </div>
+        <div class="col-1-of-3">
+
+            <section class="section-sidebar">
+
+                <div class="widget widget-profile">
+                    <div class="widget-profile__bg--grey-1">&nbsp;</div>
+                    <div class="widget-profile__bg--grey-2">&nbsp;</div>
+                    <div class="widget-profile__bg--grey-3">&nbsp;</div>
+                    <div class="widget-profile__bg--gradient-slash">&nbsp;</div>
+                    <h2 class="widget__title">PROFILE</h2>
+                    <div class="widget-profile__image"></div>
+                    <h3 class="widget-profile__name">SATOSHI INABA</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget__title">Satoshi Inaba</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </div>
+
+                <div class="widget">
+                    <h3 class="widget__title">Satoshi Inaba</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    
 </main>
 
 <a href="/blogs/new">create new blog</a>
