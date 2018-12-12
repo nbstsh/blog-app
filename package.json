@@ -4,7 +4,7 @@
   "description": "blog app",
   "main": "app.js",
   "scripts": {
-    "compile:sass": "node-sass public/sass/main.scss public/css/stylesheet.css -w",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
