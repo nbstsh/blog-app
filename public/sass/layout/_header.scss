@@ -1,0 +1,10 @@
+.header {
+    height: 15rem;
+    background-image: linear-gradient(to right bottom, rgba(green, .3), rgba(blue, .3));
+    position: relative;
+
+    &__title {
+        @include absCenter;
+        color: $color-white;
+    }
+}

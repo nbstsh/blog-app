@@ -1,0 +1,22 @@
+
+.nav {
+    height: 5rem;
+    position: relative;
+    box-shadow: 0 1px 1px rgba($color-black, .2);
+
+    &__list {
+        @include absCenter;
+        display: flex;
+        height: 100%;
+    }
+
+    &__item {
+        font-size: $default-font-size;
+
+        & a {
+            display: inline-block;
+            height: 100%;
+            padding: 1.2rem;
+        }
+    }
+}
