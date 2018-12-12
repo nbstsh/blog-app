@@ -82,6 +82,9 @@ a:visited {
     transform: translate(-50%, -50%);
     color: #fff; }
 
+.main {
+  padding-top: 5rem; }
+
 .section-blog-list {
   margin-left: 5rem;
   margin-right: 5rem; }

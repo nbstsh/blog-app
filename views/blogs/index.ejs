@@ -12,7 +12,7 @@
     </ul>
 </nav>
 
-<main>
+<main class="main">
     <section class="section-blog-list">
         <% blogs.forEach((blog) => { %>
         <div class="blog-list-item b-card">
@@ -26,6 +26,10 @@
             <a class="b-card__link" href="/blogs/<%= blog._id %>"></a>
         </div>
         <% }) %>
+    </section>
+
+    <section class="section-sidebar">
+        side bar
     </section>
 </main>
 
